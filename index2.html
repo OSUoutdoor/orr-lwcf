@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="script.js"></script>
+</head>
+<body onload="load()">
+    <h2>Navigation</h2>
+    <h4>(using D3.js-generated navigation items)</h4>
+</body>
+  <script>
+  var questions = [
+    { "prompt": "Why is the sky blue?",
+      "responses": [
+        "Because the color blue was on sale at Wallmart",
+        "Because blue is the prettiest color",
+        "Because the air molecules difract blue light more than any other color"
+      ]
+    },
+    { "prompt": "Why are leaves usually green?",
+      "responses": [
+        "So green caterpillars can hide better.",
+        "Because leaves can more easily make energy with green light",
+        "Because leaves absorb red and blue light so it's green that is reflected"
+      ]
+    }
+  ];
+
+  d3.select("body").selectAll("ul")
+      .data(questions)
+    .enter().append("ul")
+      .text(function(d) { return d.prompt })
+      .selectAll("li")
+        .data(function(d) { return d.responses; })
+      .enter().append("li")
+        .text(function(d) { return d })
+        .style("background-color", function(d, i) { return i % 2 ? "#eee" : "#ddd"; });
+  </script>
+</html>

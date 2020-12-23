@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1604436438518.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "501960D0",
+    "lastKnownWriteTime" : 8241980339193198385,
+    "last_content_update" : 1604436438518,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "1079FA38",
+        "caption" : "LandWCF_Copy_October_17_2020_11_29",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=LandWCF_Copy_October_17_2020_11_29&cache_key=1079FA38",
+        "displayedObservations" : 83,
+        "environment" : "",
+        "object" : "LandWCF_Copy_October_17_2020_11_29",
+        "preview" : 0,
+        "totalObservations" : 83,
+        "variables" : 54
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

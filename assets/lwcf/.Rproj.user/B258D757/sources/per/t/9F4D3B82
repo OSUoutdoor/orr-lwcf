@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1604898519831.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9F4D3B82",
+    "lastKnownWriteTime" : 2336927753414115334,
+    "last_content_update" : 1604898519831,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F05FB22B",
+        "caption" : "LandWCF",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=LandWCF&cache_key=F05FB22B",
+        "displayedObservations" : "189",
+        "environment" : "",
+        "object" : "LandWCF",
+        "preview" : "0",
+        "totalObservations" : "189",
+        "variables" : "54"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

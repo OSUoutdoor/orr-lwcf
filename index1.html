@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Land Water and Conservation Fund</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/L.Control.Sidebar.css" />
+  <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel:wght@500&family=Commissioner:wght@300&family=Josefin+Sans:wght@500&family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/leaflet.markercluster.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/L.Control.Sidebar.js"></script>
+  <script src="js/d3.js"></script>
+  <script src="js/c3.min.js"></script>
+  <script src="js/chroma.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <script src="js/leaflet.featuregroup.subgroup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light" id="mainNav">
+    <p><a href="https://recreationroundtable.org/" target="_blank">
+        <img src="img/ORR.png" width="15%"></a>
+      <a href="https://orei.oregonstate.edu/" target="_blank">
+        <img src="img/osu.png" width="15%"></a>
+</p>
+    <div class="container">
+      <a class="navbar-brand" href="index.html"></a>
+      <button class="navbar-toggler navbar-toggler-Left" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#project">Project</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#mapdata">Map</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#dataanalysis">Data</a></li>
+          <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section id="project" class="project-section">
+      <div class="center">
+        <h1> Outdoor Recreation and the Land and Water Conservation Fund</h1>
+        <br>
+        <h3> High-Impact Projects Across the United States for FY22-FY25 </h3>
+         <br>
+      </div>
+      <div class="container-fluid">
+      <h6>The Outdoor Recreation Roundtable (ORR), with support from partners at Oregon State University's Outdoor Recreation Economy Initiative, is building a comprehensive list of Land and Water Conservation Fund-eligible recreation projects for funding through the Great
+ American Outdoors Act. </h6>
+ <br>
+      <p>&emsp;&emsp;&emsp;The passage of the Great American Outdoors Act guarantees $900 million in mandatory annual funding for the Land and Water Conservation Fund, the most important tool for funding outdoor recreation in the United States. To help put these funds to work, ORR has sourced
+ the following projects from outdoor recreation partners from around the country--including land management agencies, state departments of natural resources, outdoor businesses and community members. ORR hopes that these projects will engage more people in
+ outdoor recreation, help create recreation economies, and grow the outdoor recreation industry for years to come. </p>
+      </br>
+    </div>
+      <div class="center">
+        <h3>  Top 11 Projects for Financial Year 2022 </h3>
+      </div>
+  <table>
+
+        <tr>
+          <th>State</th>
+          <th>Project Title</th>
+          <th>Cost</th>
+          <th>Description</th>
+          <th>Recreation Support</th>
+        </tr>
+        <tr>
+          <td>CO</td>
+          <td>Palisade Wall
+Repair at Alpine
+Tunnel Historic
+District Gunnison
+NF</td>
+          <td> $565,000</td>
+          <td> The Alpine Tunnel National Historic District (site
+#5GN.2598/5CF.838) consists of a 13 mile by 200’ wide area of the
+former Denver, South Park, and Pacific Railroad as it crossed the
+continental divide from 1880 thru 1911. The Alpine tunnel was at
+one time the highest (11,523’) railroad tunnel on the continent. On
+the west side of the tunnel a 452’ long by 33’ high dry stack stone
+wall was constructed along a 300’ high cliff to support the track. This
+engineering wonder was quickly named the Palisade Wall. This route
+was considered an engineering marvel in its day attracting tourists
+from around the globe seeking the thrill of riding this train under the
+mountains and along the cliffs. Since 1911 the former grade (hiking
+trail on the east side and motorized trail on the west side) has been a
+popular attraction. GNF estimates 1,000 visitors per month in the
+prime summer months. In 2016 a snow avalanche destroyed a 50’
+long segment of the Palisade Wall road closing access to the historic
+Alpine Tunnel site to all, but those able to make the 7 mile hike. This
+project seeks to restore the damaged section of the wall to the
+Secretary of the Interior’s Standards for Historic Preservation. The
+working estimate (from a historic stone mason and a rock scaling
+company) is $565,000 for the total restoration. This project will
+restore the accessibility of the site to accommodate visitors and
+employees with disabilities. This project will also allow the historic
+structures at Alpine Station to be maintained and preserved by the
+volunteers of the Passport in Time (PIT) program of the USDA
+Forest Service (they have not been maintained since 2015).</td>
+          <td> Backpacking/ Hiking,
+Biking, Equestrian,
+Hunting, Motorized Use,
+Skiing/Snowboarding,
+Wildlife Watching, Rock
+Climbing</td>
+        </tr>
+        <tr>
+          <td>DE</td>
+          <td>Fishing Pier,
+Delaware City
+Branch Channel of
+the C&D Canal</td>
+          <td> $500,001 -
+$750,000</td>
+          <td> This project is a multi-use platform on the west side of the Delaware
+City Branch Channel of the C&D Canal. The use for the project was
+for fishing and wildlife viewing which is adjacent to a widely used,
+very popular multi-purpose connector trail opened in 2016. Funding fell through in a shovel ready construction project of a
+fishing pier and wildlife observation. This platform complements the
+Connector Trail between the City of Delaware City and the Mike
+Castle recreation Trail that runs east-west along the C&D Canal in
+Delaware. This trail connects to the Ben Cardin Trail in Maryland.
+The connector trail is a restoration, in part, of the original C&D Canal
+tow-path.</td>
+          <td> Fishing, Wildlife Viewing,
+Walking, Biking</td>
+
+        </tr>
+        <tr>
+          <td>NH</td>
+          <td>Restore Rumney</td>
+          <td> $250,001 -
+$500,000</td>
+          <td> The Rumney climbing area in New Hampshire is the most popular
+climbing destination throughout the Northeastern US. Continued
+heavy use alongside zero maintenance and zero upgrades is
+resulting in a heavily damaged ecosystem and recreational
+experience. This project would stabilize and prevent continued
+impacts at cliff bases and provide critical maintenance to the
+network of trails throughout the destination. Field work would be
+completed by Access Fund and AmeriCorp Conservation programs</td>
+          <td>Backpacking/Hiking,
+Wildlife Watching, Rock
+Climbing </td>
+        </tr>
+        <tr>
+          <td>NM</td>
+          <td>All Abilities Park</td>
+          <td> $750,000-
+$1,000,000</td>
+          <td> The City, in conjunction with a private non-profit, is working to
+develop an "All Abilities Park" to provide an accessible, all ages park
+that meets the needs of those with handicaps or ailments that
+prevent them from enjoying typical parks and playgrounds. The hope
+is to garner funding for the feasibility and acquisition of land for the
+project.</td>
+          <td> Playground</td>
+        </tr>
+        <tr>
+          <td>NM</td>
+          <td>Animas River Wave
+Features</td>
+          <td>$1,750,000+ </td>
+          <td> The City of Farmington commissioned a River Wave Feasibility
+Study that is slated to be complete in the coming weeks. It has
+identified over 10 locations along the Animas River that could be
+developed into "features" along the river both for rapids and stand
+up waves. They hope to be able to implement this vision and create
+as many of these exciting features as possible to help solidify
+Farmington as a destination for water sport in the Four Corners.</td>
+          <td> Fishing, Canoeing,
+Kayaking and Rafting</td>
+        </tr>
+        <tr>
+          <td>NV</td>
+          <td>Red Rock Canyon
+National
+Conservation Area
+Restoration</td>
+          <td> $500,001 -
+$750,000</td>
+          <td> Red Rock Canyon NCA is one of the most popular recreation
+destinations in the Las Vegas area, with visitation reaching 2 million
+visitors annually. Sensitive soils, the delicate desert environment.
+lack of maintenance and intense use is creating an ever increasing
+network of eroding social trails and braided user access points.
+Funding is in critical need for the essential restoration efforts and
+maintenance needs throughout the NCA - resource damage is
+rampant throughout the NCA including the areas within Federally
+Designated Wilderness areas.</td>
+          <td> Backpacking/Hiking,
+Equestrian, Wildlife
+Watching, Rock Climbing</td>
+        </tr>
+        <tr>
+          <td>OR</td>
+          <td>Crooked River</td>
+          <td> TBD</td>
+          <td>The 101-acre Crooked River Canyon property (currently held by
+Trust for Public Land) provides critical access to the Crooked River.
+The Crooked River is a nationally designated wild and scenic river
+which runs through the high desert in central Oregon and provides
+remote recreational opportunities including fishing, whitewater
+boating, wildlife viewing, and stunning scenic views. Because of the
+influx of cold ground spring water through the canyon walls, the
+river is home to unique ecosystems of lush gardens of plants rare to
+central Oregon’s arid climate. Despite the fact that this river is
+nationally designated, there is very limited public access. All points
+where the river is easily accessible are privately owned, making it
+very difficult for the public to enjoy this resource. This property is
+one of the few areas where public access is available. The Crooked
+River Canyon parcel contains the “outstandingly remarkable” scenic
+and recreational values that led Congress to designate the Lower
+Crooked River as a part of the national wild and scenic river system. </td>
+          <td> Boating, Fishing,
+Canoeing, Kayaking and
+Rafting</td>
+        </tr>
+        <tr>
+          <td>UT</td>
+          <td>Indian Creek Climbing Conservation</td>
+          <td>$500,001 -
+$750,000 </td>
+          <td>Indian Creek Unit of Bears Ears National Monument is a historic
+climbing area with more than a dozen distinct climbing walls. Access
+Fund, partnering w BLM, is looking to stabilize approach trails,
+cliffside areas and protect surround resources (vegetation, cultural,
+etc). Work will include AF trail crews and AmeriCorps Conservation
+Youth crews focused on Ancestral Land youth. Specific work is
+extensive erosion control, trail work and stone work.</td>
+          <td> Backpacking/Hiking, Rock
+Climbing</td>
+        </tr>
+        <tr>
+          <td>WA</td>
+          <td>Spokane County--
+Make Beacon Hill
+Public</td>
+          <td> $3,211,500</td>
+          <td> The Spokane County Parks, Recreation and Golf Department and the
+City of Spokane Parks and Recreation Department will use this grant
+to buy 231 acres on Beacon Hill, connecting existing parks to create a
+contiguous 566-acre urban regional park. Located in the heart of
+Spokane County and the city of Spokane, Beacon Hill has been at the
+epicenter of mountain biking in the region for decades as well as a
+popular neighborhood area for hiking, dog walking, trail running, and
+more. This project not only will preserve miles of trail but also an
+urban space that serves one of Spokane's most distressed and
+disadvantaged neighborhoods. Spokane County will contribute more
+than $2.7 million in Conservation Futures, a private grant, a grant
+from the state Washington Wildlife and Recreation Program, and
+donations of labor and land or property interest.</td>
+          <td>Mountain Biking, Hiking,
+Walking, Trail Running </td>
+        </tr>
+        <tr>
+          <td>WA</td>
+          <td>Port of Anacortes—
+Developing the Cap
+Sante Marina RV
+Park</td>
+          <td>$2,311,971 </td>
+          <td>The Port of Anacortes will use this grant to develop a recreational
+vehicle (RV) park in the Cap Sante Marina. The current RV park is a
+gravel lot with 22 spaces and no utility hook-ups, forcing drivers to
+run their motors for electrical power. The Port will create 25 spaces
+with hedges for privacy, add a garbage and recycling area, and install
+utilityhook-ups for sewer, water, cable, and power. The hook-ups
+will eliminate the reliance on generators and reduce noise and air
+pollution. The Port also will collect and treat stormwater and pave
+roads and pathways. The new RV park will connect visitors to the
+marina restroom and laundry services and to waterfront parks and
+regional trails. The Port of Anacortes will contribute more than $1.8
+million in cash and a grant from the state Aquatic Lands
+Enhancement Account. </td>
+          <td> RV, Motorized Use</td>
+        </tr>
+        <tr>
+          <td>WV</td>
+          <td>New River Gorge
+National River Trail
+Modernization</td>
+          <td>$250,000-
+$500,000 </td>
+          <td>The 110 mile hiking trail system at the New River Gorge National
+River is in dire need of restoration, maintenance and modernization.
+The bulk of hiking trails at this NPS Unit were originally
+user-generated trails, not adopted into the system. This trail system
+has never seen an effort to bring the system to modern standards or
+a comprehensive maintenance program. Trail conditions throughout
+the system are rapidly deteriorating and creating further resource
+impacts and safety concerns. This project will provide critical jobs
+for local young adults through AmeriCorp programs and NPS trail
+staff to upgrade the system. </td>
+          <td>Backpacking/ Hiking,
+Biking, Equestrian,
+Canoeing, Kayaking and
+Rafting, Wildlife
+Watching, Rock Climbing </td>
+        </tr>
+
+      </table>
+    </section>
+
+    <section id="mapdata" class="mapdata-section">
+      <div class="center">
+        <h1> Map for Land & Water Conservation Survey</h1>
+      </div>
+      <br>
+      <div id="sidebar">
+        <h2 id='pro'> </h2>
+        <h5 id='org'> </h5>
+        <h6 id='fy22'> </h6>
+        <p id='description'> </p>
+        <p id='cos'> </p>
+        <p id='type'> </p>
+        <p id='rec'> </p>
+      </div>
+      <div id="map"></div>
+    </section>
+
+
+    <section id="dataanalysis" class="dataanalysis-section">
+      <div class="center">
+        <h1> Data Analysis</h1>
+        <form>
+          <input type="radio" name="states" value="set1">
+          <label>
+            FY 2022
+          </label>
+          &emsp;&emsp;&emsp;&emsp;
+          <input type="radio" name="states" value="set2">
+          <label>
+            All Data
+          </label>
+        </form>
+
+        <br>
+        <button type="button">
+        <a href="assets/lwcf/lwcfsurvey.csv" download >
+          Click Me for Survey Data.csv
+        </a>
+        </button>
+      </div>
+
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+      <div class="row">
+        <div class="col-md">
+          <div id="barchart"></div>
+        </div>
+        <div class="col-lg">
+          <div class="center">
+            <h3>Management System</h3>
+          </div>
+          <p>Projects may affect multiple agency/managment systems. This graph visualizes respondents most commonly mentioned management system their project fall under. <p>
+              <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+      <div class="row">
+        <div class="col-lg">
+          <div class="center">
+            <h3>Estimated Cost Range </h3>
+          </div>
+          <p>The green bar represent the precent of respondents who selected the estimated cost range and then the purple bar represents the number of those within that cost range which indicated they had secured private matched funds.<br><br>
+            For example : 29% of respondents said their project cost 1.7+ billion dollars and over half (62%) of these respondents also stated they had privately matched funds.
+            <p>
+
+        </div>
+        <div class="col-md">
+          <div id="cost-chart"></div>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+      <div class="row">
+        <div class="col-md">
+          <div id="matchchart"></div>
+        </div>
+        <div class="col-lg">
+          <div class="center">
+            <h3>The percentage of projects with a secured private match.</h3>
+          </div>
+          <p>This can be interpreted as precent of respondents.<p>
+              <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+      <div class="row">
+        <div class="col-lg">
+          <div class="center">
+            <h3>Application Standing</h3>
+          </div>
+          <p>The proportion of applications whom have submitted or are new concepts</p>
+          <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md">
+          <div id="conceptchart"></div>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+
+      <div class="row">
+        <div class="col-md">
+          <div id="chart"></div>
+        </div>
+        <div class="col-lg">
+          <div class="center">
+            <h3>Project Type </h3>
+          </div>
+          <p>This can be interpreted as precent of respondents.<p>
+              <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+      <div class="row">
+        <div class="col-lg">
+          <div class="center">
+            <h3>Categorization of the project</h3>
+          </div>
+          <p>This can be interpreted as precent of respondents.<p>
+              <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md">
+          <div id="catchart"></div>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+      <div class="row">
+        <div class="col-md">
+          <div id="recchart"></div>
+        </div>
+        <div class="col-lg">
+          <div class="center">
+            <h3>Recreation Types Supported</h3>
+          </div>
+          <p>Most frequently mentioned type of recreation the project supports. </p>
+          <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+
+
+
+      <div class="row">
+        <div class="col-lg">
+          <div class="center">
+            <h3>Demographics </h3>
+          </div>
+          <p class="lorem">Most commonly mentioned communities the project would serve..... <br><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="col-md">
+          <div id="demochart"></div>
+        </div>
+      </div>
+      <br>
+      <hr size="6" width="50%" align="center" color="Black">
+      <br>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="center">
+        <h1> About Us </h1>
+      </div>
+
+
+
+    <a href="https://recreationroundtable.org/" target="_blank"><h3><img src="img/ORR1.png" width="8%">&emsp;Outdoor Recreation Roundtable  </h3></a>
+      <p>The Outdoor Recreation Roundtable (ORR) is America’s leading coalition of outdoor recreation trade associations and organizations working to promote the growth of the outdoor recreation economy and outdoor recreation activities.</p>
+      <a style="color:#D73F09"  href="https://orei.oregonstate.edu/" target="_blank" color="#fd7e14">
+                <h3> <img src="img/osu1.png" width="4%">&emsp;Outdoor Recreation Economy Initiative</h3></a>
+      <p>The Outdoor Recreation Economy Initiative (OREI) is delivering a new kind of workforce development to meet the unique needs of the vast, extremely entrepreneurial, and rapidly growing outdoor recreation industry.</p>
+
+    </section>
+  </div>
+  <div class="copyright py-4 text-center text-white">
+    <div class="container">
+      <p> In partnership with <img src="img/osu.png" width="150">
+    </div>
+  </div>
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+  <div class="scroll-to-top d-lg-none position-fixed">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+  </div>
+
+  <script>
+    var colors = chroma.scale('Set2').mode('lch').colors(9);
+    // Map
+    var map = L.map("map", {
+      minZoom: 4,
+      maxZoom: 8,
+      scrollWheelZoom: false
+
+    }).setView([38, -98.], 4);
+
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/loweas/ck6rbqwaj20fi1inwqn4c4w99/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibG93ZWFzIiwiYSI6ImNqczlhMzJqMjE1dDM0NG12dHBxam1lZjIifQ.Ox8goYypCr_cJCoDPgHTsQ', {
+      attribution: 'Made By <a href="https://github.com/loweas">loweas</a>',
+    }).addTo(map);
+
+
+
+    var tests = null;
+    // Get GeoJSON and put on it on the map when it loads
+
+    // var us= L.geoJson.ajax("assets/us-states.geojson", {}).addTo(map);
+
+
+
+
+  var url1 = "assets/lwcf/lwcf.geojson";
+  var all = L.geoJson.ajax("assets/lwcf/lwcf.geojson", {
+    pointToLayer: function (feature, latlng) {
+    return L.marker(latlng, {
+        });
+   },
+   onEachFeature: function (feature, latlng) {
+    oms.addMarker(latlng);
+}
+
+   }).addTo(map);
+   var fy = L.geoJson.ajax("assets/lwcf/lwcf.geojson", {
+     filter: function(feature, layer) {
+         return feature.properties.Q35 =="FY 22";
+     },
+     pointToLayer: function (feature, latlng) {
+
+     return L.marker(latlng, {
+         });
+    },
+    onEachFeature: function (feature, latlng) {
+     oms.addMarker(latlng);
+ }
+
+    });
+    var development = L.geoJson.ajax("assets/lwcf/lwcf.geojson", {
+      filter: function(feature, layer) {
+                       return feature.properties.Q31 =="Development";
+                                   },
+      pointToLayer: function (feature, latlng) {
+
+      return L.marker(latlng, {
+          });
+     },
+     onEachFeature: function (feature, latlng) {
+      oms.addMarker(latlng);
+  }
+     });
+     var aqu = L.geoJson.ajax("assets/lwcf/lwcf.geojson", {
+       filter: function(feature, layer) {
+                        return feature.properties.Q31 =="Acquisition";
+                                    },
+       pointToLayer: function (feature, latlng) {
+
+       return L.marker(latlng, {
+           });
+      },
+      onEachFeature: function (feature, latlng) {
+       oms.addMarker(latlng);
+   }
+      });
+      var combo = L.geoJson.ajax("assets/lwcf/lwcf.geojson", {
+        filter: function(feature, layer) {
+                         return feature.properties.Q31 =="Combination (Acquisition and Development)";
+                                     },
+        pointToLayer: function (feature, latlng) {
+
+        return L.marker(latlng, {
+            });
+       },
+       onEachFeature: function (feature, latlng) {
+        oms.addMarker(latlng);
+    }
+       });
+       var plan = L.geoJson.ajax("assets/lwcf/lwcf.geojson", {
+         filter: function(feature, layer) {
+                          return feature.properties.Q31 =="Planning";
+                                      },
+         pointToLayer: function (feature, latlng) {
+
+         return L.marker(latlng, {
+             });
+        },
+        onEachFeature: function (feature, latlng) {
+         oms.addMarker(latlng);
+     }
+        });
+   var oms = new OverlappingMarkerSpiderfier(map,{markersWontMove: true, keepSpiderfied: true});
+
+   oms.addListener('click', function(marker) {
+
+   });
+
+
+//     var masClusGroup = new L.markerClusterGroup({ disableClusteringAtZoom:5,
+// zoomToBoundsOnClick: true  }).addTo(map);
+    //
+    // masClusGroup.on( 'mouseover', function ( a ) {
+    // 	if ( map.options.maxZoom == a.layer._zoom ) {
+    // 		a.layer.spiderfy();
+    // 	}
+    // });
+
+
+//
+    // var all = L.marker().addTo(map);
+    //
+    // var fy = L.marker();
+    // development = L.Marker;
+    // plan = L.marker();
+    // combo = L.marker();
+    // aqu = L.marker();
+
+
+
+    // var all = L.featureGroup.subGroup().addTo(map);
+    // fy = L.featureGroup.subGroup(masClusGroup);
+    // development = L.featureGroup.subGroup(masClusGroup);
+    // plan = L.featureGroup.subGroup(masClusGroup);
+    // combo = L.featureGroup.subGroup(masClusGroup);
+    // aqu = L.featureGroup.subGroup(masClusGroup);
+
+
+    //
+    // var url1 = "assets/lwcf/lwcf.geojson";
+    //
+    // $.getJSON(url1, function(data) {
+    //         geojsonlayer= L.geoJson(data, {
+    //           // filter: function(feature, layer) {
+    //           //     return feature.properties.Q35 !="FY 22";
+    //           // }
+    //         }).addTo(map);
+    //      });
+    // $.getJSON(url1, function(data) {
+    //              geojsonlayer= L.geoJson(data, {
+    //                    filter: function(feature, layer) {
+    //                        return feature.properties.Q35 =="FY 22";
+    //                    }
+    //              }).addTo(fy);
+    //           });
+    // $.getJSON(url1, function(data) {
+    //       geojsonlayer= L.geoJson(data, {
+    //                filter: function(feature, layer) {
+    //                  return feature.properties.Q31 =="Development";
+    //                              }
+    //                        }).addTo(development);
+    //                     });
+    //       $.getJSON(url1, function(data) {
+    //                     geojsonlayer= L.geoJson(data, {
+    //                     filter: function(feature, layer) {
+    //                          return feature.properties.Q31 =="Planning";
+    //                       }
+    //                    }).addTo(plan);
+    //             });
+    //      $.getJSON(url1, function(data) {
+    //                       geojsonlayer= L.geoJson(data, {
+    //                       filter: function(feature, layer) {
+    //                            return feature.properties.Q31 =="Acquisition";
+    //                         }
+    //                      }).addTo(aqu);
+    //               });
+    //       $.getJSON(url1, function(data) {
+    //                         geojsonlayer= L.geoJson(data, {
+    //                         filter: function(feature, layer) {
+    //                              return feature.properties.Q31 =="Combination (Acquisition and Development)";
+    //                           }
+    //                        }).addTo(combo);
+    //                 });
+
+
+  var overlayMaps  = {
+
+};
+
+var baselayer = {
+  "All": all,
+  "FY 2022": fy,
+  "Development": development,
+  "Acquisition": aqu,
+  "Combination (D&A)": combo,
+  "Planning": plan,
+
+
+};
+
+
+var lcontrol =  L.control.layers(baselayer,overlayMaps,{collapsed:false,position: 'bottomleft'}).addTo(map);
+
+
+    var sidebar = L.control.sidebar('sidebar', {
+      closeButton: true,
+      position: 'right'
+    });
+
+    map.addControl(sidebar);
+
+// This is for all points
+    all.on('click', function(e) {
+      sidebar.toggle();
+
+      var pro = document.getElementById('pro');
+      pro.innerHTML = e.layer.feature.properties.Q5_1;
+
+      var fy22 = document.getElementById('fy22');
+      if (e.layer.feature.properties.Q35 == "FY 22") {
+        fy22.innerHTML = "Financal Year 2022"
+      } else if (e.layer.feature.properties.Q35 == "FY 23 and Beyond") {
+        fy22.innerHTML = "Financal Year 2023 & Beyond"
+      } else(fy22.innerHTML = "")
+
+      var name = document.getElementById('org');
+      if (e.layer.feature.properties.Q1_1 == "NA") {
+        name.innerHTML = e.layer.feature.properties.Q1_2_TEXT;
+      } else(name.innerHTML = e.layer.feature.properties.Q1_1)
+
+      var des = document.getElementById('description');
+      des.innerHTML = "Project Description : <br> " + e.layer.feature.properties.Q5_2;
+
+      var cos = document.getElementById('cos');
+      cos.innerHTML = "Estimated Cost : " + e.layer.feature.properties.Q13;
+
+      var type = document.getElementById('type');
+      type.innerHTML = "Project Type : " + e.layer.feature.properties.Q31;
+
+      var rec = document.getElementById('rec');
+      if (e.layer.feature.properties.Q15_14_TEXT == null) {
+        rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15;
+      } else(rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15 + "" + e.layer.feature.properties.Q15_14_TEXT)
+    });
+
+// This is for FY 2022
+    fy.on('click', function(e) {
+      sidebar.toggle();
+      var pro = document.getElementById('pro');
+      pro.innerHTML = e.layer.feature.properties.Q5_1;
+
+      var fy22 = document.getElementById('fy22');
+      if (e.layer.feature.properties.Q35 == "FY 22") {
+        fy22.innerHTML = "Financal Year 2022"
+      } else if (e.layer.feature.properties.Q35 == "FY 23 and Beyond") {
+        fy22.innerHTML = "Financal Year 2023 & Beyond"
+      } else(fy22.innerHTML = "")
+
+      var name = document.getElementById('org');
+      if (e.layer.feature.properties.Q1_1 == "NA") {
+        name.innerHTML = e.layer.feature.properties.Q1_2_TEXT;
+      } else(name.innerHTML = e.layer.feature.properties.Q1_1)
+
+      var des = document.getElementById('description');
+      des.innerHTML = "Project Description : <br> " + e.layer.feature.properties.Q5_2;
+
+      var cos = document.getElementById('cos');
+      cos.innerHTML = "Estimated Cost : " + e.layer.feature.properties.Q13;
+
+      var type = document.getElementById('type');
+      type.innerHTML = "Project Type : " + e.layer.feature.properties.Q31;
+
+      var rec = document.getElementById('rec');
+      if (e.layer.feature.properties.Q15_14_TEXT == null) {
+        rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15;
+      } else(rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15 + "" + e.layer.feature.properties.Q15_14_TEXT)
+    });
+    // This is develpment
+        development.on('click', function(e) {
+          sidebar.toggle();
+          var pro = document.getElementById('pro');
+          pro.innerHTML = e.layer.feature.properties.Q5_1;
+
+          var fy22 = document.getElementById('fy22');
+          if (e.layer.feature.properties.Q35 == "FY 22") {
+            fy22.innerHTML = "Financal Year 2022"
+          } else if (e.layer.feature.properties.Q35 == "FY 23 and Beyond") {
+            fy22.innerHTML = "Financal Year 2023 & Beyond"
+          } else(fy22.innerHTML = "")
+
+          var name = document.getElementById('org');
+          if (e.layer.feature.properties.Q1_1 == "NA") {
+            name.innerHTML = e.layer.feature.properties.Q1_2_TEXT;
+          } else(name.innerHTML = e.layer.feature.properties.Q1_1)
+
+          var des = document.getElementById('description');
+          des.innerHTML = "Project Description : <br> " + e.layer.feature.properties.Q5_2;
+
+          var cos = document.getElementById('cos');
+          cos.innerHTML = "Estimated Cost : " + e.layer.feature.properties.Q13;
+
+          var type = document.getElementById('type');
+          type.innerHTML = "Project Type : " + e.layer.feature.properties.Q31;
+
+          var rec = document.getElementById('rec');
+          if (e.layer.feature.properties.Q15_14_TEXT == null) {
+            rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15;
+          } else(rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15 + "" + e.layer.feature.properties.Q15_14_TEXT)
+        });
+        // This is develpment
+            aqu.on('click', function(e) {
+              sidebar.toggle();
+              var pro = document.getElementById('pro');
+              pro.innerHTML = e.layer.feature.properties.Q5_1;
+
+              var fy22 = document.getElementById('fy22');
+              if (e.layer.feature.properties.Q35 == "FY 22") {
+                fy22.innerHTML = "Financal Year 2022"
+              } else if (e.layer.feature.properties.Q35 == "FY 23 and Beyond") {
+                fy22.innerHTML = "Financal Year 2023 & Beyond"
+              } else(fy22.innerHTML = "")
+
+              var name = document.getElementById('org');
+              if (e.layer.feature.properties.Q1_1 == "NA") {
+                name.innerHTML = e.layer.feature.properties.Q1_2_TEXT;
+              } else(name.innerHTML = e.layer.feature.properties.Q1_1)
+
+              var des = document.getElementById('description');
+              des.innerHTML = "Project Description : <br> " + e.layer.feature.properties.Q5_2;
+
+              var cos = document.getElementById('cos');
+              cos.innerHTML = "Estimated Cost : " + e.layer.feature.properties.Q13;
+
+              var type = document.getElementById('type');
+              type.innerHTML = "Project Type : " + e.layer.feature.properties.Q31;
+
+              var rec = document.getElementById('rec');
+              if (e.layer.feature.properties.Q15_14_TEXT == null) {
+                rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15;
+              } else(rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15 + "" + e.layer.feature.properties.Q15_14_TEXT)
+            });
+            // This is develpment
+                combo.on('click', function(e) {
+                  sidebar.toggle();
+                  var pro = document.getElementById('pro');
+                  pro.innerHTML = e.layer.feature.properties.Q5_1;
+
+                  var fy22 = document.getElementById('fy22');
+                  if (e.layer.feature.properties.Q35 == "FY 22") {
+                    fy22.innerHTML = "Financal Year 2022"
+                  } else if (e.layer.feature.properties.Q35 == "FY 23 and Beyond") {
+                    fy22.innerHTML = "Financal Year 2023 & Beyond"
+                  } else(fy22.innerHTML = "")
+
+                  var name = document.getElementById('org');
+                  if (e.layer.feature.properties.Q1_1 == "NA") {
+                    name.innerHTML = e.layer.feature.properties.Q1_2_TEXT;
+                  } else(name.innerHTML = e.layer.feature.properties.Q1_1)
+
+                  var des = document.getElementById('description');
+                  des.innerHTML = "Project Description : <br> " + e.layer.feature.properties.Q5_2;
+
+                  var cos = document.getElementById('cos');
+                  cos.innerHTML = "Estimated Cost : " + e.layer.feature.properties.Q13;
+
+                  var type = document.getElementById('type');
+                  type.innerHTML = "Project Type : " + e.layer.feature.properties.Q31;
+
+                  var rec = document.getElementById('rec');
+                  if (e.layer.feature.properties.Q15_14_TEXT == null) {
+                    rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15;
+                  } else(rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15 + "" + e.layer.feature.properties.Q15_14_TEXT)
+                });
+                // This is develpment
+                    plan.on('click', function(e) {
+                      sidebar.toggle();
+                      var pro = document.getElementById('pro');
+                      pro.innerHTML = e.layer.feature.properties.Q5_1;
+
+                      var fy22 = document.getElementById('fy22');
+                      if (e.layer.feature.properties.Q35 == "FY 22") {
+                        fy22.innerHTML = "Financal Year 2022"
+                      } else if (e.layer.feature.properties.Q35 == "FY 23 and Beyond") {
+                        fy22.innerHTML = "Financal Year 2023 & Beyond"
+                      } else(fy22.innerHTML = "")
+
+                      var name = document.getElementById('org');
+                      if (e.layer.feature.properties.Q1_1 == "NA") {
+                        name.innerHTML = e.layer.feature.properties.Q1_2_TEXT;
+                      } else(name.innerHTML = e.layer.feature.properties.Q1_1)
+
+                      var des = document.getElementById('description');
+                      des.innerHTML = "Project Description : <br> " + e.layer.feature.properties.Q5_2;
+
+                      var cos = document.getElementById('cos');
+                      cos.innerHTML = "Estimated Cost : " + e.layer.feature.properties.Q13;
+
+                      var type = document.getElementById('type');
+                      type.innerHTML = "Project Type : " + e.layer.feature.properties.Q31;
+
+                      var rec = document.getElementById('rec');
+                      if (e.layer.feature.properties.Q15_14_TEXT == null) {
+                        rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15;
+                      } else(rec.innerHTML = "Targeted Recreation : " + e.layer.feature.properties.Q15 + "" + e.layer.feature.properties.Q15_14_TEXT)
+                    });
+
+
+
+    map.once('focus', function() {
+      map.scrollWheelZoom.enable();
+    });
+
+
+    // Data Analysis Part of the Website using D3 and C3
+
+    // Color for graphs
+    var color4 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(4);
+    var color5 = chroma.scale(['#5c8e53', '#2a4c7e']).mode('lch').colors(5);
+    var color8 = chroma.scale(['#5c8e53', '#2a4c7e', '#8E535C', '#535353']).mode('lch').colors(9);
+    var color7 = chroma.scale(['#5c8e53', '#2a4c7e', '#8E535C']).mode('lch').colors(7);
+    var color14 = chroma.scale(['#5c8e53', '#2a4c7e', '#8E535C', '#535353']).mode('lch').colors(14);
+    var color20 = chroma.scale(['#5c8e53', '#2a4c7e', '#8E535C', '#535353']).mode('lch').colors(20);
+
+
+    //  Initial loadup
+    Promise.all([
+      d3.csv('assets/lwcf/lwcfsurvey.csv', d3.autoType),
+    ]).then(function(datasets) {
+      var df1 = datasets[0];
+      var df2 = datasets[0].filter(function(d) {
+        return d.Q35 == "FY 22";
+      })
+
+      const dfs = [df1,
+        df2
+      ];
+
+      // Radio Caller button
+      const buttons = d3.selectAll('input');
+      buttons.on('change', function(d) {
+        const selection = this.value;
+        landwater(selection, dfs)
+      });
+
+      // load the page on all data
+      $(document).ready(function() {
+        $("input:radio[value=set2]").click();
+      });
+
+
+      function landwater(selection, dfs) {
+        let df;
+        if (selection == 'set1') {
+          df = dfs[1];
+        } else if (selection == 'set2') {
+          df = dfs[0];
+        } else {
+          df = dfs[0];
+        }
+
+
+        // Estimated Cost Range
+        var estcost = d3.nest()
+          .key(function(d) {
+            return d.Q13 ;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(df);
+
+        estcost.forEach(function(e) {
+          if (e.key == "$1,750,000+") {
+            e["ranges"] = 8
+          }
+          if (e.key == "$1,500,000 - $1,750,000") {
+            e["ranges"] = 7
+          }
+          if (e.key == "$1,250,001 - $1,500,000") {
+            e["ranges"] = 6
+          }
+          if (e.key == "$1,000,001 - $1,250,000") {
+            e["ranges"] = 5
+          }
+          if (e.key == "$750,0001 - $1,000,000") {
+            e["ranges"] = 4
+          }
+          if (e.key == "$500,001 - $750,000") {
+            e["ranges"] = 3
+          }
+          if (e.key == "$250,001 - $500,000") {
+            e["ranges"] = 2
+          }
+          if (e.key == "$0 - $250,000") {
+            e["ranges"] = 1
+          }
+          if (e.key == "Unknown") {
+            e["ranges"] = 0
+          }
+        });
+        estcost.sort(function(a, b) {
+          return d3.descending(a.ranges, b.ranges);
+        });
+        var i;
+        for (i = 0; i < estcost.length; i++) {
+          estcost[i].Respondents = estcost[i]['value'] / df.length;
+        }
+
+        // for (i = 0; i < estcost.length; i++) {
+        // if(estcost[i].key=="Unknown"){let unknown = estcost.pop()};
+        // }
+        // for (i = 0; i < estcost.length; i++) {
+        //   if(estcost[i].key=="NA"){let na = estcost.pop()};
+        // }
+
+
+          var estcost1 = d3.nest()
+            .key(function(d) { return d.Q13;})
+            .key(function(d) { return d.Q21 =="Yes"; })
+            .rollup(function(v) { return v.length; })
+            .entries(df);
+
+
+            estcost1.forEach(function(e) {
+              if (e.key == "$1,750,000+") {
+                e["ranges"] = 8
+              }
+              if (e.key == "$1,500,000 - $1,750,000") {
+                e["ranges"] = 7
+              }
+              if (e.key == "$1,250,001 - $1,500,000") {
+                e["ranges"] = 6
+              }
+              if (e.key == "$1,000,001 - $1,250,000") {
+                e["ranges"] = 5
+              }
+              if (e.key == "$750,0001 - $1,000,000") {
+                e["ranges"] = 4
+              }
+              if (e.key == "$500,001 - $750,000") {
+                e["ranges"] = 3
+              }
+              if (e.key == "$250,001 - $500,000") {
+                e["ranges"] = 2
+              }
+              if (e.key == "$0 - $250,000") {
+                e["ranges"] = 1
+              }
+              if (e.key == "Unknown") {
+                e["ranges"] = 0
+              }
+            });
+            estcost1.sort(function(a, b) {
+              return d3.descending(a.ranges, b.ranges);
+            });
+
+            for (i = 0; i < estcost1.length; i++) {
+              for (j = 0; j < estcost1[i].values.length; j++) {
+              if (estcost1[i].values[j].key=="true"){
+                estcost[i].yesmatch = estcost1[i].values[j].value/estcost[i].value;
+              }
+            }
+          }
+
+
+
+
+        // 7. Project Type
+        var protypeCount = d3.nest()
+          .key(function(d) {
+            return d.Q31;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(df);
+
+        var protypedata = {};
+        var sites = [];
+        protypeCount.forEach(function(e) {
+          sites.push(e.key);
+          protypedata[e.key] = e.value;
+        })
+        // 16. Project matched funds
+        var matchCount = d3.nest()
+          .key(function(d) {
+            return d.Q21;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(df);
+
+        var matchdata = {};
+        var matchsites = [];
+        matchCount.forEach(function(e) {
+          matchsites.push(e.key);
+          matchdata[e.key] = e.value;
+        })
+
+        // 8. How would you best categorize the project?
+        var procatCount = d3.nest()
+          .key(function(d) {
+            return d.Q10;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(df);
+
+        var procatdata = {};
+        var sitescat = [];
+        procatCount.forEach(function(e) {
+          sitescat.push(e.key);
+          procatdata[e.key] = e.value;
+        })
+        // New concept ideas
+        var concept = d3.nest()
+          .key(function(d) {
+            return d.Q22;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(df);
+
+        var conceptdata = {};
+        var conceptsites = [];
+        concept.forEach(function(e) {
+          conceptsites.push(e.key);
+          conceptdata[e.key] = e.value;
+        })
+
+
+        //9. Multi question land
+        var q9 = df.map(function(d) {
+          return {
+            q9: d.Q9,
+          }
+        });
+
+
+        result = [].concat(
+          ...q9.map(
+            ({
+              q9
+            }) => q9.split(',').map(
+              land => ({
+                land
+              })
+            )
+          )
+        );
+
+
+        var lwcfp = d3.nest()
+          .key(function(d) {
+            return d.land;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(result)
+          .sort(function(a, b) {
+            return d3.descending(a.value, b.value);
+          });
+        var lands1 = [];
+        var i;
+        for (i = 0; i < lwcfp.length; i++) {
+          lwcfp[i].Respondents = lwcfp[i]['value'] / df.length;
+
+        }
+        lwcfp.forEach(function(e) {
+          lands1.push(e.key);
+        })
+
+
+        // Estimated cost
+        var q20 = df.map(function(d) {
+          return {
+            q20: d.Q20,
+          }
+        });
+        results = [].concat(
+          ...q20.map(
+            ({
+              q20
+            }) => q20.split(',').map(
+              rectype => ({
+                rectype
+              })
+            )
+          )
+        );
+        var demo = d3.nest()
+          .key(function(d) {
+            return d.rectype;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(results)
+          .sort(function(a, b) {
+            return d3.descending(a.value, b.value);
+          });
+        var demo1 = [];
+        var i;
+        for (i = 0; i < demo.length; i++) {
+          demo[i].Respondents = demo[i]['value'] / df.length;
+        }
+        demo.forEach(function(e) {
+          demo1.push(e.key);
+        })
+
+        // Estimated Rec type
+
+        var q15 = df.map(function(d) {
+
+          return {
+            q15: d.Q15,
+          }
+
+        });
+
+
+        resultrec = [].concat(
+          ...q15.map(
+            ({
+              q15
+            }) => q15.split(',').map(
+              rectype => ({
+                rectype
+              })
+            )
+          )
+        );
+        var rec = d3.nest()
+          .key(function(d) {
+            return d.rectype;
+          })
+          .rollup(function(v) {
+            return v.length;
+          })
+          .entries(resultrec)
+          .sort(function(a, b) {
+            return d3.descending(a.value, b.value);
+          });
+        var rec1 = [];
+        var i;
+        for (i = 0; i < rec.length; i++) {
+          rec[i].Respondents = rec[i]['value'] / df.length;
+        }
+        rec.forEach(function(e) {
+          rec1.push(e.key);
+        })
+
+
+
+
+
+        var chart = c3.generate({
+
+          data: {
+            json: estcost,
+            keys: {
+              x: 'key',
+              value: ['Respondents', 'yesmatch'],
+            },
+            names: {
+              Respondents: '% of Respondents in Estimated Cost Range',
+              yesmatch: '% of those Respondents with a sercured private match'
+            },
+            type: 'bar',
+            order: 'asc',
+            // color: function(color, d) {
+            //   return color8[d.index];
+            // },
+            labels: {
+              format: function(v, id, i, j) {
+                var formatPercent = d3.format(",.0%");
+                return formatPercent(v);
+              }
+            },
+
+          },
+          color: {
+            pattern: [color20[0],color20[8], color20[10], color20[11],color20[13],color20[17],color20[19]]
+          },
+          axis: {
+            x: {
+              label: {
+                text: 'Estimated Cost Range',
+                position: 'outer-center',
+              },
+
+              type: 'category',
+              // categories:  [ "$1,750,000+","$1,500,000 - $1,750,000","$1,250,001 - $1,500,000",'$1,000,001-$1,250,000',"$750,0001 - $1,000,000","$500,001 - $750,000","$250,001 - $500,000","$0 - $250,000",'Unknown'],
+              tick: {
+                centered: true
+              },
+
+            },
+            y: {
+              tick: {
+                format: d3.format('.0%')
+              },
+              label: {
+                text: '% of total Respondents (n=' + df.length + ")",
+                position: 'outer-middle'
+              },
+              max: 1,
+              min: 0,
+              padding: {
+                top: 0,
+                bottom: 0
+              }
+            },
+            rotated: true
+          },
+          legend: {
+            show: true
+          },
+          // tooltips: {
+          //   reversed: false,
+          // },
+          bindto: "#cost-chart"
+        });
+
+
+
+        var chart = c3.generate({
+          data: {
+            json: [protypedata],
+            keys: {
+              value: sites,
+            },
+            type: 'pie'
+          },
+          axis: {
+            x: {
+              type: 'category'
+            }
+          },
+          color: {
+            pattern: [color7[0], color7[2], color7[3], color7[4], 'grey']
+          },
+          bindto: "#chart"
+        });
+
+        var conceptchart = c3.generate({
+          data: {
+            json: [conceptdata],
+            keys: {
+              value: conceptsites,
+            },
+            type: 'pie'
+          },
+          axis: {
+            x: {
+              type: 'category'
+            }
+          },
+          color: {
+            pattern: [color7[0], color7[2], color7[3], color7[4], 'grey']
+          },
+          bindto: "#conceptchart"
+        });
+        var matchchart = c3.generate({
+          data: {
+            json: [matchdata],
+            keys: {
+              value: matchsites,
+            },
+            type: 'pie'
+          },
+          axis: {
+            x: {
+              type: 'category'
+            }
+          },
+          color: {
+            pattern: [color7[0], color7[2], color7[3], color7[4], 'grey']
+          },
+          bindto: "#matchchart"
+        });
+
+        var catchart = c3.generate({
+          data: {
+            json: [procatdata],
+            keys: {
+              value: sitescat,
+            },
+            type: 'pie',
+          },
+          axis: {
+            x: {
+              type: 'category'
+            }
+          },
+          color: {
+            pattern: [color20[0], color20[2], color20[4], color20[6], color20[8], color20[10], color20[11],color20[13],color20[17],color20[19]]
+          },
+          legend: {
+            show: false
+          },
+
+          bindto: "#catchart"
+        });
+
+
+        var barchart = c3.generate({
+          data: {
+            json: lwcfp,
+            keys: {
+              x: 'key',
+              value: ['Respondents'],
+            },
+            type: 'bar',
+            color: function(color, d) {
+              return color8[d.index];
+            },
+            labels: {
+              format: function(v, id, i, j) {
+                var formatPercent = d3.format(",.0%");
+                return formatPercent(v);
+              }
+            },
+          },
+
+          axis: {
+            x: {
+              label: {
+                text: '',
+                position: 'outer-center',
+              },
+              type: 'category',
+              categories: lands1,
+              tick: {
+                centered: true,
+              }
+            },
+            y: {
+              tick: {
+                format: d3.format('.0%')
+              },
+              max: 1,
+              min: 0,
+              padding: {
+                top: 0,
+                bottom: 0
+              },
+              label: {
+                text: 'Total Respondents (n=' + df.length + ")",
+                position: 'outer-middle',
+
+              },
+
+            },
+            rotated: true
+          },
+          legend: {
+            show: false
+          },
+
+          bindto: "#barchart"
+        });
+
+
+
+        var recchart = c3.generate({
+          data: {
+            json: rec,
+            keys: {
+              x: 'key',
+              value: ['Respondents'],
+            },
+            type: 'bar',
+            color: function(color, d) {
+              return color20[d.index];
+            },
+            labels: {
+              format: function(v, id, i, j) {
+                var formatPercent = d3.format(",.0%");
+                return formatPercent(v);
+              }
+            },
+          },
+
+          axis: {
+            x: {
+              label: {
+                text: '',
+                position: 'outer-center',
+              },
+              type: 'category',
+              categories: lands1,
+              tick: {
+                centered: true,
+              }
+            },
+            y: {
+              tick: {
+                format: d3.format('.0%')
+              },
+              max: 1,
+              min: 0,
+              padding: {
+                top: 0,
+                bottom: 0
+              },
+              label: {
+                text: 'Total Respondents (n=' + df.length + ")",
+                position: 'outer-middle',
+
+              },
+
+            },
+            rotated: true
+          },
+          legend: {
+            show: false
+          },
+
+          bindto: "#recchart"
+        });
+
+        var demchart = c3.generate({
+          data: {
+            json: demo,
+            keys: {
+              x: 'key',
+              value: ['Respondents'],
+            },
+            type: 'bar',
+            color: function(color, d) {
+              return color14[d.index];
+            },
+            labels: {
+              format: function(v, id, i, j) {
+                var formatPercent = d3.format(",.0%");
+                return formatPercent(v);
+              }
+            },
+          },
+
+          axis: {
+            x: {
+              label: {
+                text: 'Demographic',
+                position: 'outer-center',
+              },
+              padding: {
+                left: 0,
+                right: 0,
+              },
+              type: 'category',
+              categories: lands1,
+              tick: {
+                centered: true,
+              }
+            },
+            y: {
+              tick: {
+                format: d3.format('.0%'),
+
+              },
+              max: 1,
+              min: 0,
+              padding: {
+                top: 20,
+                bottom: 0
+              },
+              label: {
+                text: 'Total Respondents (n=' + df.length + ")",
+                position: 'outer-middle',
+
+              },
+
+            },
+            rotated: true
+          },
+          legend: {
+            show: false
+          },
+
+          bindto: "#demochart"
+        });
+
+      }
+    });
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141661518-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141661518-4');
+  </script>
+</body>
+
+</html>
