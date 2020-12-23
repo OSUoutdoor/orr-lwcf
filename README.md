@@ -1,7 +1,11 @@
-# [The Land and Water Conservation Fund](https://loweas.github.io/lwcf/)
+# [The Land and Water Conservation Fund](https://osuoutdoor.github.io/orr-lwcf/)
 This dashboard is to represent a survey conducted by Outdoor Recreation Roundtable (ORR) and is in hopes to create a list of outstanding LWCF-eligible recreation projects for FY22-FY25 from businesses and partners around the country. This list will complement the recent passage of the Great American Outdoors Act by showcasing the outstanding potential for recreation projects to support rural development and access and equity in diverse communities around the country, and will be used to help inform future priorities for the outdoor recreation economy and to educate Congress and the administration.
 
-## Process
+# Current index
+Is run off of cleaned sheet provided by ORR.
+
+
+## Process for index1.html
 1. Download Qualtric survey
 2. Run through R to Clean data.
     - This will clean columns rows.
@@ -12,6 +16,11 @@ This dashboard is to represent a survey conducted by Outdoor Recreation Roundtab
     - Write lwcf.geojson file
 4. Push new assets to github
 5. Done!
+
+# Questions?
+If you have questions about this account please contact [loweas](https://github.com/loweas)
+
+Main Holder of account [OREI](https://orei.oregonstate.edu/)
 
 ## Libraries
 #### Map
