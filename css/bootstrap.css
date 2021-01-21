@@ -73,6 +73,11 @@ table1, th, td {
   height: 600px;
 }
 
+#map1{
+  width: 100%;
+
+}
+
 .project-section{
 padding-top: 7rem;
 margin-left: 1rem;
